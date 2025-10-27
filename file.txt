@@ -1,0 +1,14 @@
+These are my current entities for Account creation(User)
+public string Accounttype;
+public int AccountNumber;
+public string AccountHolderName;
+public string Email;
+public int phonenumber;
+public DateTime dateofbirth;
+public string address;
+public DateTime dateofissue;
+public int pancard;
+public string MOP;
+
+Other Entities are on progress..
+
