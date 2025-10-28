@@ -1,0 +1,13 @@
+                     Assumption
+
+
+1. Each user can register once and can link multiple bank accounts.
+2. Each account belongs to exactly one branch.
+3. Currency codes follow ISO-4217 standards (e.g., INR, USD, GBP).
+4. Power of Attorney (POA) user must already exist in the system.
+5. Each transaction is linked to one account only.
+6. Audit logs capture only create, update, and delete actions.
+7. Roles and permissions are pre-defined by the admin.
+8. Term Deposit accounts inherit base Account properties but include maturity and interest details.
+9. Account numbers are unique across all banks.
+10. Bank employees have limited access only to their assigned branches.

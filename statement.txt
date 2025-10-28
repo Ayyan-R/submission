@@ -1,0 +1,28 @@
+                                               Problem Statement: Banking User and Account Management System
+
+
+In the modern banking ecosystem, managing users, multiple banks, and diverse account types has become complex and inefficient. Customers hold multiple accounts across various banks, and there is no unified way to manage them securely and transparently. Bank employees also need a centralized platform to manage user data, roles, and transactions efficiently.
+
+The proposed Banking User and Account Management System aims to provide a centralized and role-based platform where:
+A user can be a Normal User or a Bank User.
+Each user can have multiple accounts across multiple banks and branches.
+Banks can have multiple branches and support different account types: Savings, Current, and Term Deposit.
+Accounts can be operated by minors or under Power of Attorney.
+Multi-currency accounts (e.g., INR, USD) are supported for NRI users.
+Each action (create, update, deposit, withdraw, close) is restricted by user roles and permissions.
+All activities are logged for compliance and audit.
+
+The system improves efficiency, security, and transparency by implementing role-based access, audit tracking, and multi-bank account management.
+
+Explicit Requirements:
+User, Bank, Branch, Account, Role, Permission, and Transaction entities must be implemented.
+Each entity should have appropriate primary and foreign key relationships.
+All CRUD operations should be restricted by role-based permissions.
+System must maintain audit logs for all create, update, and delete actions.
+
+Implicit Requirements:
+User age validation (minor accounts).
+ISO-compliant currency codes.
+Unique account numbers across branches.
+Soft delete for account closure.
+Timestamps for all critical actions (CreatedAt, UpdatedAt).
