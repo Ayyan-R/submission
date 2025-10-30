@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "1fbEUlnOjhu1ENBRPvFwWUxf9X0EWZH7sWsRLBP2jUw=",
-  "Source": "BankManagementAPI",
-  "BasePath": "_content/BankManagementAPI",
+  "Hash": "/3OQm2/FtQq1TQHNC+BlBF3QtvpvwYUpTNlbuVL/lKE=",
+  "Source": "BankCustomerAPI",
+  "BasePath": "_content/BankCustomerAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

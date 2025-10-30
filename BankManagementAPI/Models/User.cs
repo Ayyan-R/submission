@@ -10,7 +10,7 @@ namespace BankManagementAPI.Models
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public string UserType { get; set; } // 'Normal' or 'Bank'
+        public string UserType { get; set; } 
         public bool IsDeleted { get; set; }
         public DateTime CreatedDate { get; set; }
 

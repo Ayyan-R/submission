@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <!-- HEAD : BEGIN -->
+  <head>
+    <title>My Webpage</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- EXTERNAL STYLE SHEET -->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <!-- EXTERNAL FONT -->
+  </head>
+  <!-- HEAD : END -->
+
+  <!-- BODY : BEGIN -->
+  <body>
+    <!-- HEADER SECTION : BEGIN -->
+    <header>
+      <!-- LOGO -->
+      <h3>Logo</h3>
+
+      <!-- MESSAGE -->
+      <h1>My name is Ayyan R</h1>
+
+      <!-- BUTTON -->
+      <a href="#contact">Say Hello!</a>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About me</h2>
+      <p>I am a software developer.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact">
+      <h2>Impressed?<br />Get in touch!</h2>
+      <form method="post" action="php/contactScript.php">
+        <input type="text" name="First Name" placeholder="First Name" />
+        <input type="text" name="Last Name" placeholder="Last Name" />
+        <input type="email" name="Email" placeholder="Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- GALLERY SECTION -->
+    <div class="gallery">
+      <h2>Some shots from my last trip!</h2>
+      <div>
+        <div>
+          <img src="https://unsplash.it/300/200?image=1015" alt="Mountain" />
+          <img src="https://unsplash.it/300/200?image=1021" alt="Forest" />
+          <img src="https://unsplash.it/300/200?image=1036" alt="Lake" />
+        </div>
+
+        <div>
+          <img src="https://unsplash.it/600/200?image=1043" alt="River Landscape" />
+          <img src="https://unsplash.it/300/200?image=1050" alt="Sunset" />
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- 🎬 VIDEO SECTION -->
+    <section id="video">
+      <h2>Watch my travel vlog!</h2>
+      <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- 🎧 AUDIO SECTION -->
+    <section id="audio">
+      <h2>Listen to some relaxing background music</h2>
+      <audio controls autoplay>
+        <source src="test.mp3" type="audio/mp3">
+        <source src="test.ogg" type="audio/ogg">
+        <source src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3" 
+                type="audio/mp3">
+    </audio>
+    </section>
+
+    <hr />
+
+    <!-- NEWSLETTER SECTION -->
+    <div id="newsletter">
+      <h2>
+        Stay connected. Sign up to my <br /><span>Free newsletter</span>
+      </h2>
+      <div class="newsletter-input">
+        <input type="text" name="Newsletter" placeholder="Your email" />
+      </div>
+      <div>
+        <a type="submit">Subscribe</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Copyright 2017 - All rights reserved</p>
+    </footer>
+  </body>
+</html>
