@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Html</title>
+<link rel="stylesheet" href="nov_04.css">
+
+</head>
+<body>
+  <header>
+    <h1>Data and Time</h1>
+    <div id="dateTime"></div>
+  </header>
+
+  <div class="controls">
+    <button onclick="showColors()">Show Colors</button>
+    <button onclick="clearColors()">Clear</button>
+    <button id="themeBtn" onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+
+  <section id="colors"></section>
+
+<script>
+const staticColors = [
+  "Red", "Blue", "Green", "Yellow", "Orange",
+  "Purple", "Pink", "Black", "Gray", "Brown"
+];
+
+function parseRgbString(rgbStr) {
+  if (!rgbStr) return null;
+  const m = rgbStr.match(/rgba?\s*\(\s*(\d+)[^\d]+(\d+)[^\d]+(\d+)/i);
+  return m ? [ +m[1], +m[2], +m[3] ] : null;
+}
+
+function readableTextColorFromRgb(rgb) {
+  if (!rgb) return "#000";
+  const [r, g, b] = rgb;
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  return brightness < 125 ? "#fff" : "#000";
+}
+
+function showColors() {
+  const container = document.getElementById('colors');
+  container.innerHTML = "";
+
+  staticColors.forEach(name => {
+    const box = document.createElement('div');
+    box.className = 'colorBox';
+    box.style.background = name;
+    box.textContent = name;
+    container.appendChild(box);
+
+    const computed = window.getComputedStyle(box).backgroundColor;
+    const rgb = parseRgbString(computed);
+    const textColor = readableTextColorFromRgb(rgb);
+    box.style.color = textColor;
+
+    const [r, g, b] = rgb || [255, 255, 255];
+    const darkness = (r + g + b) / 3;
+
+   
+    if (darkness < 40) {
+      box.style.border = "2px solid white";
+    } else {
+      box.style.border = "none";
+    }
+  });
+}
+
+function clearColors() {
+  document.getElementById('colors').innerHTML = "";
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
+
+function updateTime() {
+  document.getElementById('dateTime').textContent = new Date().toLocaleString();
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
