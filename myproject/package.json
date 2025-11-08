@@ -4,10 +4,13 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
+    "build:dev": "webpack --mode development",             
+    "build:prod": "webpack --mode production",              
+    "run-dev": "node ./dist/bundle.js",             
+    "clean": "rmdir /s /q .\\build >nul 2>nul && rmdir /s /q .\\dist >nul 2>nul",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"babel src --out-dir dist",
-    "start": "node src/index.js",
-  "dev": "node src/index.js"
+    "babel-build": "babel src --out-dir dist",      
+    "start": "node src/index.js"                      
   },
   "author": "Ayyan-R",
   "license": "ISC",
@@ -65,7 +68,13 @@
   "devDependencies": {
     "@babel/cli": "^7.28.3",
     "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5"
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript":"^7.28.5",
+    "babel-loader": "10.0.0",
+    "terser-webpack-plugin": "5.3.14",
+    "webpack": "5.102.1",
+    "webpack-cli": "6.0.1",
+    "webpack-obfuscator":"3.5.1",
+    "typescript": "^5.9.3"
   }
- 
 }
