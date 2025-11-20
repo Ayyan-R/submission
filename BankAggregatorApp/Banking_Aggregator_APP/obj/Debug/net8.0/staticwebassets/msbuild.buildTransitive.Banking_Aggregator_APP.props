@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Banking_Aggregator_APP.props" />
-</Project>

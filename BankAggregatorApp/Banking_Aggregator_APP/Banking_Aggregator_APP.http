@@ -1,6 +1,0 @@
-@Banking_Aggregator_APP_HostAddress = http://localhost:5237
-
-GET {{Banking_Aggregator_APP_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
